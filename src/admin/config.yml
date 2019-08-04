@@ -1,0 +1,44 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "src/img/illust" # Folder where user uploaded files should go
+public_folder: "img/illust"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "meetup" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Meetup" # Used in the UI, ie.: "New Post"
+    folder: "content/meetup" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    format: json
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Intro Blurb", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+
+  - label: "Content Area"
+    name: "content-areas"
+    folder: "site/layout"
+    create: true
+    extension: yaml
+    format: json
+    fields:
+      - {label: "title", name: "title", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "select",
+         options: ["One column", "Two column"]}
+      - {label: "Blocks", name: "blocks", widget: "relation",
+         many: true,
+         collections: [
+           'block-wysiwyg',
+         ]}
+  - label: "Wysiwyg Block"
+    name: 'block-wysiwyg'
+    folder: "site/layout"
+    create: true
+    fields:
+      - {label: "title", name: "title", widget: "string"}
+      - {label: "content", name: "content", widget: "markdown"}
