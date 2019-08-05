@@ -1,0 +1,21 @@
+{
+  "title": "Prázdninová grilovačka",
+  "date": "2019-08-07",
+  "venue": "SUPERKODERS",
+  "talks": [
+    {
+      "title": "Talk1",
+      "speaker": {
+        "name": "TH",
+        "avatar": "/img/illust/hejc.jpg"
+      }
+    },
+    {
+      "title": "Talk2",
+      "speaker": {
+        "name": "Martin",
+        "avatar": "/img/illust/michalek.jpg"
+      }
+    }
+  ]
+}
