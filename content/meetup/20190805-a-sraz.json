@@ -1,0 +1,22 @@
+{
+  "title": "A Sraz",
+  "date": "2019-08-01T05:16:08.451Z",
+  "venue": "Nekde jinde",
+  "youtube": "Youtube",
+  "testimonials": [
+    {
+      "quote": "Talk 1",
+      "author": {
+        "name": "Tomas",
+        "avatar": "/img/illust/hejc.jpg"
+      }
+    },
+    {
+      "quote": "Talk 2",
+      "author": {
+        "name": "Robin",
+        "avatar": "/img/illust/pokorny.jpg"
+      }
+    }
+  ]
+}
